@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html">
+<!-- O DOCTYPE define a versão do HTML/XHTML que está sendo usada -->
+
+<h:head>
+    <!-- A seção head contém informações sobre o documento, como título e codificação de caracteres -->
+    <meta charset="UTF-8" />
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+    <title>Cadastro de Contato</title>
+    <!-- Define o título da página -->
+</h:head>
+
+<h:body>
+    <!-- A seção body contém o conteúdo visível da página -->
+
+    <h:form>
+        <!-- O componente form é usado para criar um formulário -->
+
+        <p>Nome:
+            <!-- Parágrafo para o campo Nome -->
+            <h:inputText value="#{contatoMB.nome}" />
+            <!-- O componente inputText cria uma caixa de texto vinculada à propriedade 'nome' do bean 'contatoMB' -->
+        </p>
+
+        <p>Sobrenome:
+            <!-- Parágrafo para o campo Sobrenome -->
+            <h:inputText value="#{contatoMB.sobrenome}" />
+            <!-- O componente inputText cria uma caixa de texto vinculada à propriedade 'sobrenome' do bean 'contatoMB' -->
+        </p>
+
+        <p>Telefone:
+            <!-- Parágrafo para o campo Telefone -->
+            <h:inputText value="#{contatoMB.telefone}" />
+            <!-- O componente inputText cria uma caixa de texto vinculada à propriedade 'telefone' do bean 'contatoMB' -->
+        </p>
+
+        <p>E-mail:
+            <!-- Parágrafo para o campo E-mail -->
+            <h:inputText value="#{contatoMB.email}" />
+            <!-- O componente inputText cria uma caixa de texto vinculada à propriedade 'email' do bean 'contatoMB' -->
+        </p>
+
+        <p>
+            <!-- Parágrafo para o botão Salvar -->
+            <h:commandButton value="Salvar" action="#{contatoMB.salvar}" />
+            <!-- O componente commandButton cria um botão que aciona o método 'salvar' do bean 'contatoMB' quando clicado -->
+        </p>
+
+    </h:form>
+
+    <p>Cadastro confirmado: <br />
+        <!-- Parágrafo para exibir informações de cadastro confirmado -->
+        Código: #{contatoMB.id} <br />
+        <!-- Exibe o código do contato -->
+        Nome: #{contatoMB.nome}
+        <!-- Exibe o nome do contato -->
+    </p>
+
+</h:body>
+
+</html>
